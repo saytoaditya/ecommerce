@@ -98,7 +98,7 @@ class ProductController extends Controller
           ->join('products','orders.product_id','products.id')
           ->where('orders.user_id',$userId)
           ->get();
- 
           return view('myorder',['orders'=>$orders]); 
     }
+    
 }
